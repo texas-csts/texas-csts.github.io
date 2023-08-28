@@ -1,0 +1,2 @@
+# texas-csts.github.io
+The official website for Texas CSTS, a UT Austin CS organization designed to help transfer students get in or get through the UTCS program. This website is based off the Oraxol template from Colorlib.
