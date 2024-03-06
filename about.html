@@ -17,6 +17,65 @@
   <link rel="stylesheet" href="css/glightbox.min.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
+  
+   <style>
+    .py-md-5 p {
+      margin-bottom: 100px; /* Adjust the value as needed */
+    }
+    /* Add the new styles for the underlines */
+    .underline {
+      border-bottom: 1px solid #ffffff; /* Adjust the color and thickness as needed */
+      padding-bottom: 10px; /* Optional: Add some space between the text and the underline */
+      display: inline-block; /* Make sure the underline only spans the width of the text */
+    }
+
+    .underline-title {
+      border-bottom: 1px solid #ffffff; /* Adjust the color and thickness as needed */
+      padding-bottom: 1px; /* Optional: Add some space between the text and the underline */
+    }
+    .box h3 {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  li {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Optional: Add some space between the list items */
+  }
+  
+  .btn-join:hover {
+    background-color: #ff9900; /* Change this to your desired hover color */
+    color: #fff; /* Change this to the desired text color */
+  }
+  </style>
+<!-- Updated script tag with a working link -->
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+
+<script>
+  function showCoolEffect() {
+    var end = Date.now() + (5 * 1000); // 5 seconds
+    var colors = ['#FF6347', '#4B0082', '#008080', '#FFD700']; // Customize confetti colors
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 90, // Set angle to 90 for shooting down from the top
+        spread: 120, // Set spread to 45 for a wider spread
+        origin: { x: 0.5, y: 0 }, // Set origin to the top center
+        colors: colors,
+        decay: 0.85, // Adjust the decay to make confetti particles lose velocity more slowly
+        gravity: 5, // Increase gravity for faster falling
+
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+  }
+</script>
+
+
+
 </head>
 <body>
 
@@ -40,74 +99,96 @@
   </nav>
 
 
-  <section class="ftco-section ftco-about-section ftco-no-pb">
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-md-6 heading-section text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+  
+  <section class="ftco-section ftco-about-section ftco-no-pb text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
           <h2 class="mb-4">About us</h2>
           <p><span class="subheading mr-2"><a href="index.html">Home</a></span> <span class="subheading">About us</span></p>
+
+          <div class="ftco-animate">
+            <h2 class="mb-4">Welcome to Texas CSTS</h2>
+            <p>(CSTS) supports Computer Science transfer students by providing a community for new and existing transfer students and giving aid to prospective transfer student.</p>
         </div>
-      </div>
-      <div class="row">
+        
+        <div class="ftco-animate">
+          <img src="images/csts.png" alt="About us" class="img-fluid"><!-- redcue margin after image -->
       </div>
     </div>
+  </section>
 
-    <div class="container-xl">
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <div class="row g-xl-5">
-            <div class="col-md-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-              <div class="img w-100" style="background-image: url(images/about.jpg);"></div>
+ <!-- Container for the three sections -->
+<div class="container text-center">
+  <section class="ftco-section">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="py-md-5">
+          <h2 class="mb-2 underline-title">What we do</h2>
+          <!-- Section 2: What we do -->
+          <div class="row">
+            <!-- Box 1 -->
+            <div class="col-md-4">
+              <div class="box">
+                <h3>Essay Workshops</h3>
+                <p>In the spring semester, we host many essay workshops to help you revise and brainstorm ideas for your trasnfer application essay.</p>
+              </div>
             </div>
-            <div class="col-md-7 py-5 heading-section" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <div class="py-md-5">
-                <span class="subheading">Welcome to Oraxol</span>
-                <h2 class="mb-4">We Are Able to Provide Your Digital Needs</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                <div class="row py-5 g-2">
-                  <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap" data-aos="fade-up" data-aos-duration="1000">
-                      <div class="text">
-                        <span class="d-block number gradient-text"><span id="count1" class="counter" data-count="50">0</span></span>
-                        <p>Years of Experienced</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                      <div class="text">
-                        <span class="d-block number gradient-text"><span id="count2" class="counter" data-count="210">0</span>K+</span>
-                        <p>Finished Project</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                      <div class="text">
-                        <span class="d-block number gradient-text"><span id="count2" class="counter" data-count="450">0</span></span>
-                        <p>Company Staff</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                      <div class="text">
-                        <span class="d-block number gradient-text"><span id="count2" class="counter" data-count="100">0</span></span>
-                        <p>Satified Clients</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!-- Box 2 -->
+            <div class="col-md-4">
+              <div class="box">
+                <h3>Resume Workshops</h3>
+                <p>We host resume workshops to give you sugestions to make to your resume and make it competitive</p>
+              </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-4">
+              <div class="box">
+                <h3>Socials!</h3>
+                <p>We will host many social! Such as game night, pizza night and a coding night</p> <!-- WORK IN PROGRESS LOL -->
               </div>
             </div>
           </div>
+          <!-- End of Section 2 -->
+
+          <h2 class="mb-2 underline-title ">Why Join CSTS?</h2>
+          <!-- Section 3: Why join CSTS? -->
+            <li>Make life long friends with fellow students!</li>           
+            <li>Get personal connections to transfer students</li>
+            <li>Be more knowledged with the transfer process</li>
+            <li>Make yourself a more competitive applicant</li>        
+        </div>  
+          
+          <!-- End of Section 3 -->
+
+          <h2 class="mb-2 underline-title">Who Can Join</h2>
+          <!-- Section 4: Who can join -->
+            <li>Any CS Transfer students</li>           
+            <li>Internal, External, and Accelerated (ATP) transfer</li>
+            <li>Must be a current UT student</li>
+            <li>No dues (except donations for org swag)</li>
+          <!-- End of Section 4 -->
         </div>
       </div>
     </div>
   </section>
 
-  <hr>
+
+
+
+  <section class="ftco-section join-section">
+  <div class="container text-center">
+    <h2 class="mb-4">Are you ready to join?</h2>
+    <p>Discover the opportunities and benefits of becoming a part of Texas CSTS!</p>
+    <button class="btn btn-primary btn-join" onclick="showCoolEffect()">Yes, I'm Ready!</button>
+  </div>
+</section>
+
+
+</div>
+
+
+
 
 
   <section class="ftco-section" id="scroll">
@@ -115,7 +196,7 @@
       <div class="row justify-content-center">
         <div class="col-md-10 heading-section mb-5" data-aos="fade-up" data-aos-duration="1000">
           <span class="subheading">Our Team</span>
-          <h2 class="mb-4">Designer &amp; Developer</h2>
+          <h2 class="mb-4 underline-title">Officer Team</h2>
         </div>
       </div>
       <div class="row justify-content-center">
@@ -124,8 +205,8 @@
             <div class="col-md-6">
               <div class="team-wrap d-flex align-items-center" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="100">
                 <div class="text pr-3">
-                  <h3>John McArthur</h3>
-                  <span class="position">CEO, Founder &amp; Developer</span>
+                  <h3>Gerardo</h3>
+                  <span class="position">President</span>
                 </div>
                 <div class="img" style="background-image: url(images/team-1.jpg)"></div>
               </div>
@@ -133,8 +214,8 @@
             <div class="col-md-6">
               <div class="team-wrap d-flex align-items-center" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="200">
                 <div class="text pr-3">
-                  <h3>Mark Sky</h3>
-                  <span class="position">Graphic Designer</span>
+                  <h3>Odette</h3>
+                  <span class="position">Events</span>
                 </div>
                 <div class="img" style="background-image: url(images/team-2.jpg)"></div>
               </div>
@@ -142,8 +223,8 @@
             <div class="col-md-6">
               <div class="team-wrap d-flex align-items-center" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="300">
                 <div class="text pr-3">
-                  <h3>Kyle Becker</h3>
-                  <span class="position">Web Designer</span>
+                  <h3>Alex</h3>
+                  <span class="position">Treasurer</span>
                 </div>
                 <div class="img" style="background-image: url(images/team-3.jpg)"></div>
               </div>
@@ -151,8 +232,8 @@
             <div class="col-md-6">
               <div class="team-wrap d-flex align-items-center" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">
                 <div class="text pr-3">
-                  <h3>Alan Nortwood</h3>
-                  <span class="position">CEO, Founder &amp; Developer</span>
+                  <h3>Doeun</h3>
+                  <span class="position">Outreach</span>
                 </div>
                 <div class="img" style="background-image: url(images/team-4.jpg)"></div>
               </div>
@@ -163,9 +244,7 @@
     </div>
   </section>
 
-
-  <hr>
-
+  
   <section class="ftco-section testimony-section">
     <div class="container-xl">
       <div class="row justify-content-center">
@@ -173,8 +252,7 @@
           <div class="row justify-content-end pb-4">
             <div class="col-md-7 heading-section" data-aos="fade-up" data-aos-duration="1000">
               <span class="subheading">Testimonial</span>
-              <h2 class="mb-3">Satisfied Clients</h2>
-            </div>
+              <h2 class="mb-3"> Advice from our past transfers</h2>
           </div>
           <div class="row justify-content-end">
             <div class="col-md-7" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -183,12 +261,12 @@
                   <div class="testimony-wrap">
                     <div class="icon d-flex align-items-center justify-content-center"><span class="ion ion-ios-quote"></div>
                       <div class="text">
-                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <p class="mb-4 msg">I would say the biggest advice I would give to prospective transfers is to find what you want from UTCS. Sure the degree itself is cool, but why would specifically UTCS exel your career after college</p>
                         <div class="d-flex align-items-center">
                           <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
                           <div class="pl-3 tx">
-                            <p class="name">Roger Scott</p>
-                            <span class="position">Marketing Manager</span>
+                            <p class="name">Austin Tran</p>
+                            <span class="position">Class of 26</span>
                           </div>
                         </div>
                       </div>
